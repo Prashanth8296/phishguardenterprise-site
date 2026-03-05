@@ -1,31 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Privacy Policy - Phishguard Enterprise</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Phishguard Enterprise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-top: #0a121f;
+      --bg-bottom: #02040a;
+      --card: rgba(10, 18, 32, 0.82);
+      --text: #f6f7fb;
+      --muted: #c5cad3;
+      --gold: #e5c88f;
+      --stroke: rgba(229, 200, 143, 0.28);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      font-family: "Manrope", "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 20%, rgba(229, 200, 143, 0.14), transparent 34%),
+        radial-gradient(circle at 90% 80%, rgba(46, 84, 154, 0.2), transparent 36%),
+        linear-gradient(150deg, var(--bg-top), var(--bg-bottom));
+      padding: 28px;
+      display: grid;
+      place-items: center;
+    }
+
+    .panel {
+      width: min(900px, 100%);
+      background: linear-gradient(160deg, rgba(17, 27, 47, 0.94), var(--card));
+      border: 1px solid var(--stroke);
+      border-radius: 24px;
+      padding: clamp(24px, 4vw, 46px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+    }
+
+    h1 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .intro {
+      color: var(--gold);
+      margin-bottom: 28px;
+      font-size: clamp(1rem, 2.2vw, 1.2rem);
+    }
+
+    .section {
+      padding: 16px 0;
+      border-top: 1px solid rgba(229, 200, 143, 0.16);
+    }
+
+    .section:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    h2 {
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 0.98rem;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 28px;
+      text-decoration: none;
+      color: #f3e1bb;
+      border: 1px solid rgba(243, 225, 187, 0.4);
+      border-radius: 12px;
+      padding: 10px 14px;
+      background: rgba(243, 225, 187, 0.08);
+    }
+
+    .back:hover {
+      background: rgba(243, 225, 187, 0.15);
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 16px; }
+      .panel { border-radius: 18px; }
+    }
+  </style>
 </head>
-<body style="font-family: Arial; margin:40px;">
+<body>
+  <main class="panel">
+    <h1>Privacy Policy</h1>
+    <p class="intro">Phishguard Enterprise respects your privacy.</p>
 
-<h1>Privacy Policy</h1>
+    <section class="section">
+      <h2>Information We Access</h2>
+      <p>This app requests read-only access to your Gmail account using the Gmail API.</p>
+    </section>
 
-<p>Phishguard Enterprise respects your privacy.</p>
+    <section class="section">
+      <h2>Purpose of Access</h2>
+      <p>Email content is analyzed to detect phishing threats and malicious links.</p>
+    </section>
 
-<h2>Information We Access</h2>
-<p>This app requests read-only access to your Gmail account using the Gmail API.</p>
+    <section class="section">
+      <h2>Data Storage</h2>
+      <p>We do NOT store, collect, or share your emails. All processing occurs locally on the device.</p>
+    </section>
 
-<h2>Purpose of Access</h2>
-<p>Email content is analyzed to detect phishing threats and malicious links.</p>
+    <section class="section">
+      <h2>Data Sharing</h2>
+      <p>No email content is transmitted to external servers unless required for optional security scanning services.</p>
+    </section>
 
-<h2>Data Storage</h2>
-<p>We do NOT store, collect, or share your emails. All processing occurs locally on the device.</p>
+    <section class="section">
+      <h2>User Control</h2>
+      <p>You may revoke Gmail access anytime via your Google Account permissions page.</p>
+    </section>
 
-<h2>Data Sharing</h2>
-<p>No email content is transmitted to external servers unless required for optional security scanning services.</p>
-
-<h2>User Control</h2>
-<p>You may revoke Gmail access anytime via your Google Account permissions page.</p>
-
-<p><a href="index.html">Back to Home</a></p>
-
+    <a class="back" href="index.html">Back to Home</a>
+  </main>
 </body>
 </html>
