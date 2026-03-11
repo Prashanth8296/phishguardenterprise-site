@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PhishGuard Login</title>
+</head>
+
+<body>
+
+<h2>PhishGuard Enterprise</h2>
+<p>Login successful. You may close this page.</p>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const code = params.get("code");
+
+if(code){
+    document.body.innerHTML += "<p>Authorization received.</p>";
+}
+</script>
+
+</body>
+</html>
