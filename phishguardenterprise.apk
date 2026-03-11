@@ -1,1 +1,17 @@
+Test Instructions:
+
+1. Download the APK from:
+https://phishguardenterprise.xyz/download/phishguardenterprise.apk
+
+2. Install the app on an Android device.
+
+3. Open the PhishGuard Enterprise app.
+
+4. Enter VirusTotal API key.
+
+5. Click "Scan".
+
+6. Sign in with Google and grant Gmail read permission.
+
+7. The app will fetch recent emails and scan them for phishing threats.
 
