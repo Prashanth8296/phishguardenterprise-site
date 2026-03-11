@@ -1,21 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>PhishGuard Enterprise Login</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--bg-top:#0a121f;
+--bg-bottom:#02040a;
+--glass:rgba(7,13,24,0.76);
+--gold:#d7b16a;
+--gold-soft:#f3dbac;
+--text:#f6f7fb;
+--muted:#b5bcc8;
+--stroke:rgba(215,177,106,0.3);
+--shadow:0 30px 80px rgba(0,0,0,0.45);
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+min-height:100vh;
+display:grid;
+place-items:center;
+padding:32px;
+color:var(--text);
+font-family:"Manrope","Segoe UI",sans-serif;
+background:
+radial-gradient(circle at 15% 20%, rgba(215,177,106,0.16), transparent 34%),
+radial-gradient(circle at 88% 82%, rgba(39,74,140,0.22), transparent 38%),
+linear-gradient(150deg,var(--bg-top),var(--bg-bottom));
+}
+
+.card{
+width:min(700px,100%);
+border:1px solid var(--stroke);
+border-radius:26px;
+background:linear-gradient(165deg,rgba(15,24,42,0.92),var(--glass));
+backdrop-filter:blur(10px);
+box-shadow:var(--shadow);
+padding:52px 40px;
+text-align:center;
+}
+
+.badge{
+display:inline-flex;
+align-items:center;
+gap:10px;
+border:1px solid rgba(215,177,106,0.45);
+border-radius:999px;
+padding:8px 16px;
+color:var(--gold-soft);
+font-size:0.8rem;
+letter-spacing:0.08em;
+text-transform:uppercase;
+background:rgba(215,177,106,0.08);
+margin-bottom:18px;
+}
+
+h1{
+font-family:"Cormorant Garamond",Georgia,serif;
+font-size:3rem;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:var(--gold-soft);
+font-size:1.2rem;
+margin-bottom:25px;
+}
+
+.login-btn{
+text-decoration:none;
+}
+
+.login-btn button{
+padding:14px 28px;
+font-size:18px;
+border-radius:12px;
+border:1px solid rgba(243,219,172,0.35);
+background:rgba(243,219,172,0.06);
+color:#f9ecd0;
+cursor:pointer;
+transition:all .2s ease;
+}
+
+.login-btn button:hover{
+transform:translateY(-2px);
+background:rgba(243,219,172,0.14);
+border-color:rgba(243,219,172,0.7);
+}
+
+</style>
 </head>
 
 <body>
 
-<h2>PhishGuard Enterprise</h2>
-<p>Login to scan your Gmail for phishing emails</p>
+<div class="card">
 
-<a href="https://accounts.google.com/o/oauth2/v2/auth?client_id=477754029231-mij7qdeqcnc23sjhq1f5jepmt89l04tu.apps.googleusercontent.com&redirect_uri=https://phishguardenterprise.xyz/callback.html&response_type=code&scope=https://www.googleapis.com/auth/gmail.readonly">
+<div class="badge">
+Enterprise Security
+</div>
 
-<button style="padding:10px 20px;font-size:18px;">
+<h1>PhishGuard Enterprise</h1>
+
+<p class="subtitle">
+Login to scan your Gmail for phishing emails
+</p>
+
+<a class="login-btn"
+href="https://accounts.google.com/o/oauth2/v2/auth?client_id=477754029231-mij7qdeqcnc23sjhq1f5jepmt89l04tu.apps.googleusercontent.com&redirect_uri=https://phishguardenterprise.xyz/callback.html&response_type=code&scope=https://www.googleapis.com/auth/gmail.readonly">
+
+<button>
 Login with Google
 </button>
 
 </a>
+
+</div>
 
 </body>
 </html>
