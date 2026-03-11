@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>PhishGuard Login</title>
+<title>PhishGuard Enterprise</title>
 </head>
 
 <body>
 
 <h2>PhishGuard Enterprise</h2>
-<p>Login successful. You may close this page.</p>
+<p>Login successful. Redirecting to app...</p>
 
 <script>
 const params = new URLSearchParams(window.location.search);
 const code = params.get("code");
 
 if(code){
-    document.body.innerHTML += "<p>Authorization received.</p>";
+    window.location.href = "phishguard://oauth?code=" + code;
 }
 </script>
 
