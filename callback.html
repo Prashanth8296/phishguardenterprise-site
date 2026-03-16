@@ -9,13 +9,31 @@
 <h2>PhishGuard Enterprise</h2>
 <p>Login successful. Redirecting to app...</p>
 
+<p>If the app does not open automatically, click below:</p>
+
+<a id="openApp">Open PhishGuard App</a>
+<br><br>
+
+<a href="https://phishguardenterprise.xyz/phishguardenterprise.apk">
+Download PhishGuard App
+</a>
+
 <script>
+
 const params = new URLSearchParams(window.location.search);
 const code = params.get("code");
 
 if(code){
-    window.location.href = "phishguard://oauth?code=" + code;
+
+    const deepLink = "phishguard://oauth?code=" + code;
+
+    document.getElementById("openApp").href = deepLink;
+
+    // Try to open the app automatically
+    window.location.href = deepLink;
+
 }
+
 </script>
 
 </body>
