@@ -2,33 +2,44 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Prashanth Kumar G | Portfolio</title>
+<title>Prashanth Kumar G | Cybersecurity Analyst & Robotics Engineer Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600;1,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
 /* GLOBAL */
 body {
   margin:0;
-  font-family:'Poppins',sans-serif;
+  font-family:'Inter',sans-serif;
   color:white;
-  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+
+  /* COLORFUL GRADIENT BACKGROUND */
+  background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #fdbb2d, #0f2027);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
 }
 
-/* NAVBAR */
+/* ANIMATION */
+@keyframes gradientBG {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+
+/* NAV */
 nav {
   display:flex;
   justify-content:space-between;
   padding:20px 60px;
   position:sticky;
   top:0;
-  background:rgba(0,0,0,0.4);
+  background:rgba(0,0,0,0.5);
   backdrop-filter:blur(10px);
 }
 
 nav a {
-  color:#f3dbac;
+  color:#ffd89b;
   margin:0 15px;
   text-decoration:none;
 }
@@ -42,19 +53,25 @@ nav a {
 }
 
 .hero h1 {
-  font-size:50px;
-}
-
-.hero span {
-  color:#ff7a18;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:55px;
+  color:#ffd89b;
+  line-height:1.2;
 }
 
 .hero p {
-  color:#ccc;
+  color:#eee;
 }
 
+.hero p:first-of-type {
+  font-style:italic;
+  font-size:18px;
+}
+
+/* BUTTON */
 .btn {
-  background:linear-gradient(45deg,#ff7a18,#ffb347);
+  background:linear-gradient(45deg,#ff9966,#ff5e62);
   padding:12px 25px;
   border-radius:25px;
   display:inline-block;
@@ -66,13 +83,21 @@ nav a {
   padding:80px 60px;
 }
 
+/* HEADINGS */
+h2 {
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  color:#ffd89b;
+  font-size:32px;
+  margin-bottom:20px;
+}
+
 /* CARD */
 .card {
-  background:rgba(255,255,255,0.08);
+  background:rgba(0,0,0,0.4);
   padding:25px;
   border-radius:15px;
-  backdrop-filter:blur(10px);
-  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  backdrop-filter:blur(8px);
 }
 
 /* GRID */
@@ -91,10 +116,11 @@ nav a {
   border-radius:12px;
 }
 
-/* HEADINGS */
-h2 {
-  margin-bottom:20px;
-  color:#ffb347;
+/* HIGHLIGHT TEXT */
+.highlight {
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  color:#ffcc70;
 }
 
 </style>
