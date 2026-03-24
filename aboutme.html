@@ -2,29 +2,24 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Prashanth Kumar G | Cybersecurity Analyst & Robotics Engineer Portfolio</title>
+<title>Prashanth Kumar G | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600;1,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600;1,700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
-/* GLOBAL */
+/* BODY */
 body {
   margin:0;
-  font-family:'Inter',sans-serif;
-  color:white;
+  font-family:'Poppins',sans-serif;
+  color:#333;
 
-  /* COLORFUL GRADIENT BACKGROUND */
-  background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #fdbb2d, #0f2027);
-  background-size: 400% 400%;
-  animation: gradientBG 10s ease infinite;
-}
-
-/* ANIMATION */
-@keyframes gradientBG {
-  0% {background-position:0% 50%;}
-  50% {background-position:100% 50%;}
-  100% {background-position:0% 50%;}
+  /* SOFT COLORFUL BACKGROUND (DIZME STYLE) */
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255, 183, 197, 0.4), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(173, 216, 230, 0.4), transparent 40%),
+    radial-gradient(circle at 30% 80%, rgba(255, 223, 186, 0.4), transparent 40%),
+    #f9f9f9;
 }
 
 /* NAV */
@@ -32,16 +27,12 @@ nav {
   display:flex;
   justify-content:space-between;
   padding:20px 60px;
-  position:sticky;
-  top:0;
-  background:rgba(0,0,0,0.5);
-  backdrop-filter:blur(10px);
 }
 
 nav a {
-  color:#ffd89b;
   margin:0 15px;
   text-decoration:none;
+  color:#333;
 }
 
 /* HERO */
@@ -52,26 +43,26 @@ nav a {
   padding:80px;
 }
 
+/* NAME (ELEGANT ITALIC) */
 .hero h1 {
   font-family:'Playfair Display',serif;
   font-style:italic;
   font-size:55px;
-  color:#ffd89b;
-  line-height:1.2;
+  color:#000;
+}
+
+.hero span {
+  color:#ff6a3d;
 }
 
 .hero p {
-  color:#eee;
-}
-
-.hero p:first-of-type {
-  font-style:italic;
-  font-size:18px;
+  color:#666;
 }
 
 /* BUTTON */
 .btn {
-  background:linear-gradient(45deg,#ff9966,#ff5e62);
+  background:#ff6a3d;
+  color:white;
   padding:12px 25px;
   border-radius:25px;
   display:inline-block;
@@ -80,24 +71,15 @@ nav a {
 
 /* SECTION */
 .section {
-  padding:80px 60px;
-}
-
-/* HEADINGS */
-h2 {
-  font-family:'Playfair Display',serif;
-  font-style:italic;
-  color:#ffd89b;
-  font-size:32px;
-  margin-bottom:20px;
+  padding:60px;
 }
 
 /* CARD */
 .card {
-  background:rgba(0,0,0,0.4);
+  background:white;
   padding:25px;
-  border-radius:15px;
-  backdrop-filter:blur(8px);
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
 /* GRID */
@@ -111,32 +93,35 @@ h2 {
 .project {
   flex:1;
   min-width:250px;
-  background:rgba(255,255,255,0.1);
+  background:white;
   padding:20px;
-  border-radius:12px;
+  border-radius:10px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.08);
 }
 
-/* HIGHLIGHT TEXT */
-.highlight {
+/* HEADINGS */
+h2 {
   font-family:'Playfair Display',serif;
   font-style:italic;
-  color:#ffcc70;
+  color:#ff6a3d;
 }
 
 </style>
 </head>
-  
-<body>
 
+<body> 
 <!-- NAV -->
 <nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#experience">Experience</a>
-  <a href="#projects">Projects</a>
-  <a href="#skills">Skills</a>
-  <a href="#certifications">Certifications</a>
-  <a href="#contact">Contact</a>
+  <h2 style="font-family:'Playfair Display'; font-style:italic;">Prashanth</h2>
+  <dev>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </dev>
 </nav>
 <!-- HOME -->
 <section id="home" class="section">
