@@ -2,297 +2,273 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Prashanth Kumar G | Cybersecurity Analyst & Robotics Engineer Portfolio</title>
+<title>Prashanth Kumar G | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500;1,600;1,700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-/* FORCE TITLE FONT */
-h1, h2, h3, nav h2 {
-  font-family: 'Playfair Display', serif !important;
-  font-style: italic !important;
-}
-.hero h1 {
-  font-family: 'Playfair Display', serif !important;
-  font-style: italic !important;
-  font-size: 60px;
-  letter-spacing: 1px;
-}
-/* BODY */
-body {
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  color:#333;
 
-  /* SOFT COLORFUL BACKGROUND (DIZME STYLE) */
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* BODY */
+body{
+  font-family:'Poppins',sans-serif;
+  display:flex;
   background:
-    radial-gradient(circle at 10% 20%, rgba(255, 183, 197, 0.4), transparent 40%),
-    radial-gradient(circle at 80% 30%, rgba(173, 216, 230, 0.4), transparent 40%),
-    radial-gradient(circle at 30% 80%, rgba(255, 223, 186, 0.4), transparent 40%),
+    radial-gradient(circle at 10% 20%, rgba(255, 183, 197, 0.3), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(173, 216, 230, 0.3), transparent 40%),
     #f9f9f9;
 }
 
-/* NAV */
-nav {
-  display:flex;
-  justify-content:space-between;
-  padding:20px 60px;
+/* SIDEBAR */
+.sidebar{
+  width:250px;
+  height:100vh;
+  position:fixed;
+  background:white;
+  padding:30px 20px;
+  box-shadow:5px 0 20px rgba(0,0,0,0.05);
 }
 
-nav a {
-  margin:0 15px;
-  text-decoration:none;
-  color:#333;
-}
-
-/* HERO */
-.hero {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:80px;
-}
-
-/* NAME (ELEGANT ITALIC) */
-.hero h1 {
+.sidebar h2{
   font-family:'Playfair Display',serif;
   font-style:italic;
-  font-size:55px;
-  color:#000;
+  margin-bottom:30px;
 }
 
-.hero span {
-  color:#ff6a3d;
+.sidebar a{
+  display:block;
+  text-decoration:none;
+  color:#333;
+  padding:10px;
+  border-radius:8px;
+  margin-bottom:8px;
+  transition:0.3s;
 }
 
-.hero p {
-  color:#666;
-}
-
-/* BUTTON */
-.btn {
+.sidebar a:hover{
   background:#ff6a3d;
   color:white;
-  padding:12px 25px;
-  border-radius:25px;
-  display:inline-block;
-  margin-top:20px;
+}
+
+/* MAIN */
+.main{
+  margin-left:250px;
+  padding:40px;
+  width:100%;
 }
 
 /* SECTION */
-.section {
-  padding:60px;
+.section{
+  margin-bottom:40px;
 }
 
 /* CARD */
-.card {
+.card{
   background:white;
   padding:25px;
   border-radius:12px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  margin-top:15px;
+}
+
+/* HERO */
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:45px;
+}
+
+.hero p{
+  margin-top:10px;
+  color:#555;
 }
 
 /* GRID */
-.grid {
-  display:flex;
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:20px;
-  flex-wrap:wrap;
 }
 
 /* PROJECT */
-.project {
-  flex:1;
-  min-width:250px;
-  background:white;
-  padding:20px;
+.project{
+  background:#fff;
+  padding:18px;
   border-radius:10px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.08);
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+  transition:0.3s;
+}
+
+.project:hover{
+  transform:translateY(-5px);
 }
 
 /* HEADINGS */
-h2 {
+h2{
+  color:#ff6a3d;
   font-family:'Playfair Display',serif;
   font-style:italic;
-  color:#ff6a3d;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .sidebar{
+    width:100%;
+    height:auto;
+    position:relative;
+  }
+
+  .main{
+    margin-left:0;
+  }
 }
 
 </style>
 </head>
 
-<body> 
-<!-- NAV -->
-<nav>
-  <h2 style="font-family:'Playfair Display'; font-style:italic;"></h2>
-  <dev>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
-  </dev>
-</nav>
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <h2>Prashanth Kumar</h2>
+
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
 <!-- HOME -->
-<section id="home" class="section">
-<div class="card">
+<div id="home" class="section hero">
   <h1>Prashanth Kumar G</h1>
   <p><b>Cybersecurity Analyst & Robotics Engineer</b></p>
-  <p>
-    Building secure intelligent systems by combining cybersecurity, AI, and robotics.
-  </p>
+  <p>Building secure intelligent systems using AI, Robotics & Cybersecurity.</p>
 </div>
-</section>
-<!-- ABOUT -->
-<section id="about" class="section">
-<div class="card">
-  <h2>About Me</h2>
 
-  <p>
+<!-- ABOUT -->
+<div id="about" class="section">
+  <h2>About</h2>
+  <div class="card">
+  	<p>
     I am a multidisciplinary engineer specializing in both cybersecurity and robotics.
     I have hands-on experience in SOC operations, Threat intelligence, real-time
     cyber attack detection and Robot Operating System.
-  </p>
-
-  <p>
+  	</p>
+	
+	 <p>
     Alongside cybersecurity, I design and develop robotic systems using ESP32,
     Raspberry Pi, and embedded systems, focusing on automation and intelligent control.
   </p>
 
-  <p>
+	<p>
     My goal is to build secure, intelligent systems that integrate AI, robotics,
     and cybersecurity to solve real-world problems.
   </p>
 
+
 </div>
-</section>
+</div>
+
 <!-- EDUCATION -->
-<section id="education" class="section">
+<div id="education" class="section">
   <h2>Education</h2>
-
   <div class="grid">
-
     <div class="card">
-      <h3>M.Tech – Robotics</h3>
-      <p><i>CGPA: 8.31</i></p>
+      <h3>M.Tech Robotics</h3>
+      <p>CGPA: 8.31</p>
       <p>
         Specialized in robotics systems, automation, and intelligent control
         integrating AI and Robotic Technologies.
-      </p>
+      </p>	
     </div>
-
     <div class="card">
-      <h3>B.E – Mechanical Engineering</h3>
-      <p><i>CGPA: 6.89</i></p>
+      <h3>B.E Mechanical</h3>
+      <p>CGPA: 6.89</p>
       <p>
-        Built strong foundation in mechanical systems, design principles, Quality Control
-        and engineering problem-solving.
+        Built strong foundation in mechanical systems, design principles, Quality Control and engineering problem-solving.
       </p>
     </div>
-
   </div>
-</section>
-<!-- Experience -->
-<section id="experience" class="section">
-<div class="card">
+</div>
 
-<h2>Experience</h2>
-
-<div class="project">
-  <h3>Intern – Maxbyte Technology Pvt Ltd (2024 – Present)</h3>
-  <p>
-    Working on robotics systems and cybersecurity analysis. Hands-on expertise in building robots and integrating sensors  
+<!-- EXPERIENCE -->
+<div id="experience" class="section">
+  <h2>Experience</h2>
+  <div class="grid">
+    <div class="project">
+      <h3>Intern – Maxbyte(2024 - Present)</h3>
+      <p>Working on robotics systems and cybersecurity analysis. Hands-on expertise in building robots and integrating sensors  
 with Raspberry Pi.Understanding of power management systems.Strong debugging and troubleshooting capabilities in hardware  
 and software.Knowledge of hardware platforms like ESP32, RaspberryPi3 and PCA9685. Hands-on experience in Phishing & URL Analysis to detect  
-the Malware. 
-  </p>
-</div>
-
-<div class="project">
-  <h3>SOC Analyst – Center for Internet Studies & AI (2023)</h3>
-  <p>
-    Performed real-time log monitoring and incident investigation. Worked with SIEM tools,
-    analyzed alerts, handled false positives, and followed MITRE ATT&CK framework for
-    threat detection and response.
-  </p>
-</div>
-
-<div class="project">
-  <h3>Cybersecurity Trainee – SOC Experts & NIELIT(2022 - 2023)</h3>
-  <p>
-    Gained hands-on experience in network security, malware analysis, and vulnerability
-    assessment. Worked on Splunk dashboards, alerts, and incident reporting.
-  </p>
-</div>
-
-<div class="project">
-  <h3>Quality Assurance Engineer – Rabwin Industry (2020 – 2022)</h3>
-  <p>
-   Maintaining and updating Customer Drawings. Inspecting the component as per the customer drawing tolerances. Preparing the First Information Report as per the Customer
-Drawings. 8D Form is given to represent department, it is given when the Component fails to meet the Customer Drawing Tolerances. 
+the Malware.</p>
+    </div>
+    <div class="project">
+      <h3>SOC Analyst - Center for Internet of Studies & AI(2023)</h3>
+      <p>Performed real-time log monitoring and incident investigation. Worked with SIEM tools,analyzed alerts, handled false positives, and followed MITRE ATT&CK framework forthreat detection and response.</p>
+    </div>
+    <div class="project">
+      <h3>Cybersecurity Trainee – SOC Experts & NIELIT(2022 - 2023)</h3>
+      <p>Gained hands-on experience in network security, malware analysis, and vulnerability assessment. Worked on Splunk dashboards, alerts, and incident reporting.</p>
+    </div>
+    <div class="project">
+      <h3>Quality Assurance Engineer – Rabwin Industry (2020 – 2022)</h3>
+      <p> Maintaining and updating Customer Drawings. Inspecting the component as per the customer drawing tolerances. Preparing the First Information Report as per the CustomerDrawings. 8D Form is given to represent department, it is given when the Component fails to meet the Customer Drawing Tolerances. 
 8D Form is followed and maintained weekly.
 Closing the Stock of the inspected component through SAP.  
-Verifying the dispatch list to Dispatch the Component.     
-  </p>
+Verifying the dispatch list to Dispatch the Component.</p>
+    </div>
+    <div class="project">
+      <h3>Graduate Apprentice Trainee – Airports Authority of India (2019 – 2020)</h3>
+      <p>Lost and found Item Maintaining, Documenting and Uploading to public through web portal.Clearing the public grievances faced on the Airport. Every day inspection on Airport premises (FIDS, CISF Tools,Fire Extinguisher). Validating and monitoring the Flight schedules of summer and winter. We play protocols for the VVIP's (President of India, Governors, PM, CM, Chief Justice, IAS & IPSetc.). 
+Updating & Maintaining the Flight Bills monthly. Updating the revenue wages of people working in the Airport monthly through SAP. </p>
+    </div>
+  </div>
 </div>
 
-<div class="project">
-  <h3>Graduate Apprentice Trainee – Airports Authority of India (2019 – 2020)</h3>
-  <p>
-  Lost and found Item Maintaining, Documenting and Uploading to public through web portal.Clearing the public grievances faced on the Airport. Every day inspection on Airport premises (FIDS, CISF Tools, 
-Fire Extinguisher). Validating and monitoring the Flight schedules of summer and winter. We play protocols for the VVIP's (President of India, Governors, PM, CM, Chief Justice, IAS & IPS etc.). 
-Updating & Maintaining the Flight Bills monthly. Updating the revenue wages of people working in the Airport monthly through SAP. 
-  </p>
-</div>
-
-</div>
-</section>
 <!-- PROJECTS -->
-<section id="projects" class="section">
-<div class="card">
-
-<h2>Projects</h2>
-
-<h3>🛡 Cybersecurity</h3>
-
-<div class="project">
-  <h3>PhishGuard Enterprise </h3>
-  <p>AI-powered phishing detection system using VirusTotal API.</p>
-  <p>✔ Real-time URL scanning</p>
-  <p>✔ Email threat detection</p>
-  <p>✔ Threat intelligence integration</p>
-</div>
-
-<div class="project">
-  <h3>Vulnerability Scanning</h3>
-  <p>Security assessment using Nessus and Kali Linux.</p>
-</div>
-
-<h3>🤖 Robotics</h3>
-
-<div class="project">
-  <h3>Staircase Climbing Robot</h3>
-  <p>
-    Designed and built a robot capable of climbing stairs using ESP32-CAM,
-    DC motors, and sensor integration.
-  </p>
-</div>
-
-<div class="project">
+<div id="projects" class="section">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="project">
+      <h3>PhishGuard Enterprise</h3>
+      <p>AI-powered phishing detection system using VirusTotal API.</p>
+      <p>✔ Real-time URL scanning</p>
+      <p>✔ Email threat detection</p>
+      <p>✔ Threat intelligence integration</p>    
+    </div>
+    <div class="project">
+     <h3>Vulnerability Scanning</h3>
+       <p>Security assessment using Nessus and Kali Linux.</p>
+    </div>
+    <div class="project">
+      <h3>Staircase Robot</h3>
+      <p>Designed and built a robot capable of climbing stairs using ESP32-CAM,
+    DC motors, and sensor integration.</p>
+    </div>
+    <div class="project">
   <h3>Infant Rescue Robot (Smart India Hackathon 2023)</h3>
   <p>Robotic system for borewell rescue operations.</p>
+  </div>
+  </div>
 </div>
 
-</div>
-</section>
 <!-- SKILLS -->
-<section id="skills" class="section">
-<div class="card">
-
-<h2>Skills</h2>
-
-<h3>🛡 Cybersecurity</h3>
+<div id="skills" class="section">
+  <h2>Skills</h2>
+  <h3>🛡 Cybersecurity</h3>
 <p>Threat Intelligence, SOC Operations, Malware Analysis, Vulnerability Assessment</p>
 
 <h3>🤖 Robotics</h3>
@@ -305,15 +281,12 @@ Updating & Maintaining the Flight Bills monthly. Updating the revenue wages of p
 <p>Splunk, Wireshark, Nessus, OpenVAS, Nmap, Kali Linux, Mx Tool Box, Cyberchef, Browserling, Abusel IPDB, VirusTotal</p>
 
 </div>
-</section>
+
 <!-- CERTIFICATIONS -->
-<section id="certifications" class="section">
-<div class="card">
-
-<h2>Certifications</h2>
-
-<div class="project">
-  <h3>Cybersecurity Certifications</h3>
+<div id="certifications" class="section">
+  <h2>Certifications</h2>
+  <div class="card">
+    <h3>Cybersecurity Certifications</h3>
   <p>✔ Cisco – Cyber Threat Management</p>
   <p>✔ IBM – Cybersecurity Fundamentals</p>
   <p>✔ IBM – QRadar SIEM Foundation</p>
@@ -325,38 +298,39 @@ Updating & Maintaining the Flight Bills monthly. Updating the revenue wages of p
   <p>✔ Fortinet – Introduction to the Threat Landscape 2.0</p>
   <p>✔ Fortinet – Fortinet Certified Fundamentals Cybersecurity</p>
   <p>✔ Udemy – ROS2 For Beginners (ROS FOXY, HUMBLE 2024)</p>
-</div>
-
-<div class="project">
+  </div>
+  
+  <div class="project">
   <h3>Network Security Certifications</h3>
   <p>✔ Fortinet NSE 1 – Network Security Associate</p>
   <p>✔ Fortinet NSE 2 – Network Security Associate</p>
 </div>
 
-<div class="project">
+  <div class="project">
   <h3>Tools & Platform Certifications</h3>
   <p>✔ Splunk – Fundamentals (eLearning)</p>
   <p>✔ AWS – Networking Basics</p>
   <p>✔ AWS – Security, Identity & Compliance</p>
 </div>
 
-<div class="project">
+  <div class="project">
   <h3>Academic & Training Certifications</h3>
   <p>✔ SOC Experts – Cybersecurity Certificate</p>
   <p>✔ NIELIT Calicut – Cyber Security Course</p>
 </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Email: prashanthkumarganesh@gmail.com</p>
+    <p>LinkedIn: linkedin.com/in/prashanthkumar82</p>
+    <p>Mobile: +91 8220117076</p>
+  </div>
+</div>
 
 </div>
-</section>
-<!-- CONTACT -->
-<section id="contact" class="section">
-<div class="card">
-  <h2>Contact</h2>
-  <p>Email: prashanthkumarganesh@gmail.com</p>
-  <p>LinkedIn: https://www.linkedin.com/in/prashanthkumar82</p>
-   <p>Mobile No: +91 8220117076</p>
-</div>
-</section>
 
 </body>
 </html>
